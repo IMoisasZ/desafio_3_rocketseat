@@ -1,0 +1,115 @@
+fieldset {
+    border: none;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+
+    &:has(.input-file) {
+        & input {
+            background-color: var(--shape-body);
+            padding-left: 0;
+            &::placeholder {
+                color: var(--input-placeholder);
+                font: var(--body-md);
+            }
+        }
+    }
+
+    & label {
+        color: var(--text-body);
+        font: var(--body-sm);
+        margin-bottom: 12px;
+    }
+
+    & input {
+        padding: 13px 16px;
+        border: var(--input-stroke);
+        border-radius: 8px;
+        background-color: var(--input-base);
+        color: var(--input-placeholder);
+    }
+}
+
+.text-area {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+
+    & label {
+        color: var(--text-body);
+        font: var(--body-sm);
+        margin-bottom: 12px;
+    }
+
+    & textarea {
+        padding: 13px 16px;
+        border: var(--input-stroke);
+        border-radius: 8px;
+        background-color: var(--input-base);
+        color: var(--input-placeholder);
+    }
+}
+
+
+.color-btn {
+    background-color: transparent;
+    border: none;
+    /* position: absolute; */
+}
+
+.color-btn:hover {
+    border: 3px solid var(--brand-light);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.switch-btn {
+    & p {
+        color: var(--text-body);
+        font: var(--body-sm);
+        margin-bottom: 12px;
+    }
+
+    & {
+        button {
+            width: 64px;
+            height: 32px;
+            border-radius: 999px;
+            border: none;
+            background-color: var(--input-base);
+        }
+        
+        & .internal-circle {
+            border-radius: 999px;
+            width: 24px;
+            height: 24px;
+            background-color: var(--input-stroke);
+            transition: 1s;
+        }
+    
+        & .internal-circle:hover {
+                transform: translate(40px, 0);
+        }
+
+        & .style {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        & span {
+            color: var(--text-heading);
+            font: var(--body-sm);
+            padding-top: 5%;
+        }
+    }
+
+}
+
+.hr {
+    border-bottom: 1px solid var(--text-body);
+    margin-bottom: 24px;
+}
